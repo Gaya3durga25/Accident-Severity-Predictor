@@ -1,6 +1,6 @@
 # 🚦 Accident Severity Predictor (RTA)
 
-This is a machine learning-powered web app built with Streamlite that predicts the severity of road traffic accidents based on user inputs.
+This is a machine learning-powered web app built with Flask that predicts the severity of road traffic accidents based on user inputs.
 
 ---
 
