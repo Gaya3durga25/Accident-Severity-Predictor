@@ -7,7 +7,7 @@ This is a machine learning-powered web app built with Streamlite that predicts t
 ## 🔧 Tech Stack
 
 - Python 3
-- Streamlit
+- Flask
 - Scikit-learn
 - HTML
 - CSS
