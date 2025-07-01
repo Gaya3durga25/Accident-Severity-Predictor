@@ -114,25 +114,41 @@
 
 <script>
     document.getElementById("predictionForm").addEventListener("submit", async function (event) {
-        event.preventDefault(); // Prevent the default form submit
-    
+        event.preventDefault();
+
         const formData = new FormData(this);
-    
-        // Create a popup window early
-        const popup = window.open("", "PredictionPopup", "width=400,height=300,top=200,left=500");
-    
-        // Show a loading message
+        const popup = window.open("", "PredictionPopup", "width=400,height=400,top=200,left=500");
         popup.document.write("<h3 style='text-align:center; margin-top:50px;'>Predicting...</h3>");
-    
+
         try {
             const response = await fetch("/predict", {
                 method: "POST",
                 body: formData
             });
-    
-            const result = await response.json(); // Expecting JSON from Flask
-    
-            // Build the popup content
+
+            const result = await response.json();
+
+            // Check for error
+            if (result.error) {
+                popup.document.body.innerHTML = `<h3 style="color:red; text-align:center;">Error: ${result.error}</h3>`;
+                return;
+            }
+
+            // Build prediction HTML
+            let predictionHTML = `<h4>Most Likely Outcome: ${result.most_likely}</h4>`;
+            predictionHTML += "<h5>Prediction Probabilities:</h5><ul class='list-group'>";
+
+            for (const [key, value] of Object.entries(result.prediction)) {
+                predictionHTML += `
+                <li class='list-group-item d-flex justify-content-between align-items-center'>
+                    ${key}
+                    <span class="badge bg-primary rounded-pill">${value}</span>
+                </li>`;
+            }
+
+            predictionHTML += "</ul>";
+
+            // Build popup content
             popup.document.open();
             popup.document.write(`
                 <html>
@@ -142,19 +158,20 @@
                     </head>
                     <body class="d-flex justify-content-center align-items-center vh-100 bg-light">
                         <div class="text-center bg-white p-4 rounded shadow">
-                            <h4>${result.prediction}</h4>
+                            ${predictionHTML}
                             <button onclick="window.close()" class="btn btn-outline-primary mt-3">Close</button>
                         </div>
                     </body>
                 </html>
             `);
             popup.document.close();
-    
+
         } catch (error) {
             popup.document.body.innerHTML = `<h3 style="color:red; text-align:center;">Error: ${error}</h3>`;
         }
     });
-    </script>
+</script>
+
     
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
