@@ -75,7 +75,7 @@ The output page shows whether the accident is **Slight**, **Serious**, or **Fata
 **Step 4: Experiment Further**  
 Change inputs to see how different factors influence accident severity predictions. 
 
-## 📂 Project Strcture 
+## 📂 Project Structure
 
 Accident-Severity-Predictor/
 │
@@ -88,6 +88,7 @@ Accident-Severity-Predictor/
 ├── requirements.txt       # Dependencies list
 ├── .gitignore             # Ignored files for version control
 └── README.md              # Project documentation
+
 
 
 
