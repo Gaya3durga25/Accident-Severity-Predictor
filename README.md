@@ -36,28 +36,69 @@ Built using **Flask** and **Scikit-learn**, the application provides an intuitiv
 
 ---
 
-Navigate to the project directory:
+## 🛠️ Installation Guide
 
-cd Accident-Severity-Predictor
+1. **Clone the repository**  
+```bash
+git clone <repository_url>
 
+2. **Navigate to the project directory**
 
-Create and activate a virtual environment:
+cd Accident_Severity_Predictor
+
+3. **Create and activate a virtual environment**
 
 python -m venv venv
-source venv/bin/activate  # Linux/Mac
-venv\Scripts\activate     # Windows
+# Linux/Mac
+source venv/bin/activate
+# Windows
+venv\Scripts\activate
 
-
-Install dependencies:
+4.  **Install dependencies:**
 
 pip install -r requirements.txt
 
-
-Run the Flask application:
+5.  **Run the Flask application:**
 
 python app.py
 
-
-Open your browser and navigate to:
+6.  **Open your browser and navigate to:
 
 http://127.0.0.1:5000
+
+---
+
+##🖼️ How to Use
+
+**Step 1: Enter Accident Details**
+
+Fill out the form with weather, light condition, vehicle type, and road surface.
+
+**Step 2: Predict Severity**
+
+Click the Predict button to view the model’s prediction.
+
+**Step 3: Analyze Results**
+
+The output page shows whether the accident is Slight, Serious, or Fatal.
+
+**Step 4: Experiment Further**
+
+Change inputs to see how different factors influence accident severity predictions.
+
+---
+
+###📂 Project Structure
+Accident-Severity-Predictor/
+│
+├── templates/             # HTML templates for the Flask web app
+├── RTA Dataset.csv        # Dataset used for model training
+├── app.py                 # Main Flask application
+├── app1.py                # Optional alternate Flask version
+├── extree_model.pkl       # Trained ML model
+├── model.ipynb            # Jupyter Notebook with training pipeline
+├── requirements.txt       # Dependencies list
+├── .gitignore             # Ignored files for version control
+└── README.md              # Project documentation
+
+
