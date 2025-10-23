@@ -77,17 +77,20 @@ Change inputs to see how different factors influence accident severity predictio
 
 ## 📂 Project Structure
 
+```
 Accident-Severity-Predictor/
 │
-├── templates/             # HTML templates for the Flask web app
-├── RTA Dataset.csv        # Dataset used for model training
-├── app.py                 # Main Flask application
-├── app1.py                # Optional alternate Flask version
-├── extree_model.pkl       # Trained ML model
-├── model.ipynb            # Jupyter Notebook with training pipeline
-├── requirements.txt       # Dependencies list
-├── .gitignore             # Ignored files for version control
-└── README.md              # Project documentation
+├── templates/ # HTML templates for the Flask web app
+├── RTA Dataset.csv # Dataset used for model training
+├── app.py # Main Flask application
+├── app1.py # Optional alternate Flask version
+├── extree_model.pkl # Trained ML model
+├── model.ipynb # Jupyter Notebook with training pipeline
+├── requirements.txt # Dependencies list
+├── .gitignore # Ignored files for version control
+└── README.md # Project documentation
+```
+
 
 
 
