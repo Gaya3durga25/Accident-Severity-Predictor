@@ -38,7 +38,7 @@ Built using **Flask** and **Scikit-learn**, the application provides an intuitiv
 
 ## 🛠️ Installation Guide
 
-1. **Clone the repository**  
-```bash
-git clone <repository_url>
+1. **Clone the repository**
+2. Navigate to the project directory
+
 
