@@ -45,9 +45,9 @@ cd Accident_Severity_Predictor
 
 **Step 2: Create and activate a virtual environment**  
 python -m venv venv  
-# Linux/Mac  
+## Linux/Mac  
 source venv/bin/activate  
-# Windows  
+## Windows  
 venv\Scripts\activate
 
 **Step 3: Install dependencies**  
@@ -88,6 +88,7 @@ Accident-Severity-Predictor/
 ├── requirements.txt       # Dependencies list
 ├── .gitignore             # Ignored files for version control
 └── README.md              # Project documentation
+
 
 
 
